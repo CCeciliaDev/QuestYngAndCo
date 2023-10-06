@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Patrick+Hand&display=swap');
+
+.divHome {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 2rem;
+  margin: auto;
+  font-family: 'Handlee', cursive;
+}
+
+.divHome h3 {
+  font-size: 2em;
+}
+
+.link {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2b6685;
+}

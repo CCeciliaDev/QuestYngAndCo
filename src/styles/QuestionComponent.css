@@ -1,0 +1,42 @@
+
+/* Styles pour chaque question */
+.question-count {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.question-text {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+/* Styles pour la section des réponses */
+.answer-section {
+  margin-bottom: 30px;
+}
+
+/* Styles pour chaque bouton de réponse */
+.button {
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #e7f2f5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #93b1c1;
+}
+
+/* Styles pour la réponse sélectionnée */
+.selected-answer {
+  background-color: #2b6685;
+  border: none;
+  color: white;
+}

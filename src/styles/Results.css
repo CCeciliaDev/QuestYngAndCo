@@ -2,7 +2,7 @@
 
 /* Styles généraux pour la page Results */
 .divResults {
-  font-family: 'Handlee', cursive;
+  font-family: 'Handlee', sans-serif;
   font-size: 1.1em;
   padding: 2em;
   max-width: 80%;

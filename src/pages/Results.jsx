@@ -19,7 +19,7 @@ function Results() {
     const doc = new jsPDF();
     
     const marginLeft = 10;
-    const maxWidth = 170;
+    const maxWidth = 200;
     const pageHeight = 297;
     const indentTitre = 10;
     const indentOther = 20;
@@ -83,21 +83,32 @@ function Results() {
   const exportChartToPDF = () => {
     const doc = new jsPDF({ orientation: 'landscape' });
     const marginLeft = 20;
-    // const marginTop = 40;
     const marginTop = 30;
     const pageWidth = 297;
-    // const maxWidth = pageWidth - 2.3 * marginLeft;
-    const maxWidth = pageWidth - 2.5 * marginLeft;
+    // const maxWidth = pageWidth - 2.5 * marginLeft;
+    const maxWidth = pageWidth - 2 * marginLeft;
   
     doc.setFontSize(14).text(`${prenom} ${nom}`, marginLeft, 15);
     doc.text(`${date}`, marginLeft, 25);
   
+    // const chartElement = document.querySelector('.chart-container');
+    // html2canvas(chartElement).then(canvas => {
+    //   const imgData = canvas.toDataURL('image/png');
+    //   const imgHeight = (canvas.height * maxWidth) / canvas.width;
+
+    //   doc.addImage(imgData, 'PNG', marginLeft, marginTop, maxWidth, imgHeight);
+    //   doc.save(`${nom}_${prenom}_diagramme.pdf`);
+
     const chartElement = document.querySelector('.chart-container');
     html2canvas(chartElement).then(canvas => {
       const imgData = canvas.toDataURL('image/png');
-      const imgHeight = (canvas.height * maxWidth) / canvas.width;
-      doc.addImage(imgData, 'PNG', marginLeft, marginTop, maxWidth, imgHeight);
+      const imgWidth = maxWidth;  // Utiliser la largeur maximale pour l'image
+      const imgHeight = (canvas.height * maxWidth) / canvas.width;  // Calculer la hauteur pour maintenir les proportions de l'image
+      const xCentered = (pageWidth - imgWidth) / 2;  // Calculer la position x pour que l'image soit centrée
+      
+      doc.addImage(imgData, 'PNG', xCentered, marginTop, imgWidth, imgHeight);  // Ajouter l'image au PDF
       doc.save(`${nom}_${prenom}_diagramme.pdf`);
+
     });
   };
   

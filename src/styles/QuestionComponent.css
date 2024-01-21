@@ -14,11 +14,12 @@
 /* Styles pour la section des réponses */
 .answer-section {
   margin-bottom: 30px;
+  font-size: 1em;
 }
 
 /* Styles pour chaque bouton de réponse */
 .button {
-  font-family: 'Handlee', cursive;
+  font-family: 'Handlee', sans-serif;
   font-weight: bold;
   font-size: 1em;
   padding: 10px 20px;
@@ -39,4 +40,12 @@ button:hover {
   background-color: #2b6685;
   border: none;
   color: white;
+}
+
+@media (max-width: 380px) {
+  .button {
+    font-size: 0.9em;
+    padding: 5px 15px;
+    margin-right: 5px;
+  }
 }

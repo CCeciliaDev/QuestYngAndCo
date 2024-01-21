@@ -2,7 +2,7 @@
 
 /* Styles généraux pour la page TestQuest */
 .divTest {
-  font-family: 'Handlee', cursive;
+  font-family: 'Handlee', sans-serif;
   font-size: 1.1em;
   padding: 2em;
   max-width: 80%;
@@ -24,7 +24,7 @@
   width: 20em;
 }
 .divTest input {
-  font-family: 'Handlee', cursive;
+  font-family: 'Handlee', sans-serif;
   font-weight: bold;
   color: #2b6685;
   font-size: 1em;
@@ -88,4 +88,8 @@
   color: #098c74; 
 }
 
-
+@media (max-width: 380px) {
+  .inputDiv {
+    width: 100%;
+  }
+}

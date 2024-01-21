@@ -1,25 +1,31 @@
 /* Par défaut, définissez une hauteur de 500px */
-.chart-container {
+/* .chart-container {
   height: 500px;
-}
+} */
+/* .chart-container {
+  height: 500px;
+  min-width: 600px; 
+} */
 
+
+/* * * * * TESTS * * * * */
 /* Pour les écrans de largeur inférieure à 768px, réduisez la hauteur */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .chart-container {
     height: 550px;
   }
-}
+} */
 
 /* Pour les écrans de largeur entre 769px et 1024px, ajustez la hauteur */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* @media (min-width: 769px) and (max-width: 1024px) {
   .chart-container {
     height: 400px;
   }
-}
+} */
 
 /* Pour les écrans de largeur supérieure à 1024px, augmentez la hauteur */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   .chart-container {
     height: 600px;
   }
-}
+} */
